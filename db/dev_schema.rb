@@ -1,6 +1,6 @@
 # encoding: UTF-8
 # This file is dumped from the dev instance of the DB and trimmed down.
-# It is outdated relative to its production counterpart. 
+# It is outdated relative to its production counterpart.
 #
 # Instead of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -12,6 +12,9 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
+
+# @NOTE: this is just an artifact from SULDEV2, not really useful for anything
+# @NOTE: missing default for lane_id
 
 ActiveRecord::Schema.define(version: 0) do
 
