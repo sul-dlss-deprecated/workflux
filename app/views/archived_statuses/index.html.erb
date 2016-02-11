@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Archived Statuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Druid</th>
+      <th>Datastream</th>
+      <th>Process</th>
+      <th>Status</th>
+      <th>Error msg</th>
+      <th>Error txt</th>
+      <th>Datetime</th>
+      <th>Attempts</th>
+      <th>Lifecycle</th>
+      <th>Elapsed</th>
+      <th>Repository</th>
+      <th>Archive dt</th>
+      <th>Version</th>
+      <th>Note</th>
+      <th>Priority</th>
+      <th>Lane</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @archived_statuses.each do |archived_status| %>
+      <tr>
+        <td><%= archived_status.druid %></td>
+        <td><%= archived_status.datastream %></td>
+        <td><%= archived_status.process %></td>
+        <td><%= archived_status.status %></td>
+        <td><%= archived_status.error_msg %></td>
+        <td><%= archived_status.error_txt %></td>
+        <td><%= archived_status.datetime %></td>
+        <td><%= archived_status.attempts %></td>
+        <td><%= archived_status.lifecycle %></td>
+        <td><%= archived_status.elapsed %></td>
+        <td><%= archived_status.repository %></td>
+        <td><%= archived_status.archive_dt %></td>
+        <td><%= archived_status.version %></td>
+        <td><%= archived_status.note %></td>
+        <td><%= archived_status.priority %></td>
+        <td><%= archived_status.lane %></td>
+        <td><%= link_to 'Show', archived_status %></td>
+        <td><%= link_to 'Edit', edit_archived_status_path(archived_status) %></td>
+        <td><%= link_to 'Destroy', archived_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Archived status', new_archived_status_path %>

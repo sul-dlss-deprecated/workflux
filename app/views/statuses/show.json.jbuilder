@@ -1,0 +1,1 @@
+json.extract! @status, :id, :druid, :datastream, :process, :status, :error_msg, :error_txt, :datetime, :attempts, :elapsed, :lifecycle, :repository, :note, :priority, :lane_id, :created_at, :updated_at

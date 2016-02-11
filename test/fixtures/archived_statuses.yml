@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  druid: MyString
+  datastream: MyString
+  process: MyString
+  status: MyString
+  error_msg: MyString
+  error_txt: MyText
+  datetime: 2016-02-10 18:02:32
+  attempts: 1
+  lifecycle: MyString
+  elapsed: 9.99
+  repository: MyString
+  archive_dt: 2016-02-10 18:02:32
+  version: 1
+  note: MyString
+  priority: 1
+  lane_id: 
+
+two:
+  druid: MyString
+  datastream: MyString
+  process: MyString
+  status: MyString
+  error_msg: MyString
+  error_txt: MyText
+  datetime: 2016-02-10 18:02:32
+  attempts: 1
+  lifecycle: MyString
+  elapsed: 9.99
+  repository: MyString
+  archive_dt: 2016-02-10 18:02:32
+  version: 1
+  note: MyString
+  priority: 1
+  lane_id: 

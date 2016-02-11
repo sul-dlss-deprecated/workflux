@@ -9,11 +9,14 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
+# To stand in this app as a separate interface to the workflows database,
+# we will need some aliases to maintain Rails naming conventions (plural table names).
+#
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 0) do
 
-  create_table "workflows", force: :cascade do |t|
+  create_table "statuses", force: :cascade do |t|
     t.string    "druid",      limit: 256,                                               null: false
     t.string    "datastream", limit: 256,                                               null: false
     t.string    "process",    limit: 256,                                               null: false
@@ -30,12 +33,12 @@ ActiveRecord::Schema.define(version: 0) do
     t.string    "lane_id",    limit: 256,                           default: "default", null: false
   end
 
-  add_index "workflows", ["datetime", "repository"], name: "tr_wf_idx"
-  add_index "workflows", ["druid", "process", "datastream", "repository"], name: "dpdr_wf_idx", unique: true
-  add_index "workflows", ["process", "status", "datastream", "lane_id", "repository"], name: "psdlr_wf_idx"
-  add_index "workflows", ["repository", "process", "status", "datastream", "druid", "priority"], name: "idx$$_095f0001"
+  add_index "statuses", ["datetime", "repository"], name: "tr_wf_idx"
+  add_index "statuses", ["druid", "process", "datastream", "repository"], name: "dpdr_wf_idx", unique: true
+  add_index "statuses", ["process", "status", "datastream", "lane_id", "repository"], name: "psdlr_wf_idx"
+  add_index "statuses", ["repository", "process", "status", "datastream", "druid", "priority"], name: "idx$$_095f0001"
 
-  create_table "workflows_archives", force: :cascade do |t|
+  create_table "archived_statuses", force: :cascade do |t|
     t.string    "druid",      limit: 256,                                                    null: false
     t.string    "datastream", limit: 256,                                                    null: false
     t.string    "process",    limit: 256,                                                    null: false
@@ -54,7 +57,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.string    "lane_id",    limit: 256,                           default: "default",      null: false
   end
 
-  add_index "workflows_archives", ["datastream"], name: "ds_wf_ar_bitmap_idx"
-  add_index "workflows_archives", ["druid"], name: "druid_wf_ar_idx"
-  add_index "workflows_archives", ["repository"], name: "repo_wf_ar_bitmap_idx"
+  add_index "archived_statuses", ["datastream"], name: "ds_wf_ar_bitmap_idx"
+  add_index "archived_statuses", ["druid"], name: "druid_wf_ar_idx"
+  add_index "archived_statuses", ["repository"], name: "repo_wf_ar_bitmap_idx"
 end

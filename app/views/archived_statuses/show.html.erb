@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Druid:</strong>
+  <%= @archived_status.druid %>
+</p>
+
+<p>
+  <strong>Datastream:</strong>
+  <%= @archived_status.datastream %>
+</p>
+
+<p>
+  <strong>Process:</strong>
+  <%= @archived_status.process %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @archived_status.status %>
+</p>
+
+<p>
+  <strong>Error msg:</strong>
+  <%= @archived_status.error_msg %>
+</p>
+
+<p>
+  <strong>Error txt:</strong>
+  <%= @archived_status.error_txt %>
+</p>
+
+<p>
+  <strong>Datetime:</strong>
+  <%= @archived_status.datetime %>
+</p>
+
+<p>
+  <strong>Attempts:</strong>
+  <%= @archived_status.attempts %>
+</p>
+
+<p>
+  <strong>Lifecycle:</strong>
+  <%= @archived_status.lifecycle %>
+</p>
+
+<p>
+  <strong>Elapsed:</strong>
+  <%= @archived_status.elapsed %>
+</p>
+
+<p>
+  <strong>Repository:</strong>
+  <%= @archived_status.repository %>
+</p>
+
+<p>
+  <strong>Archive dt:</strong>
+  <%= @archived_status.archive_dt %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @archived_status.version %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @archived_status.note %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @archived_status.priority %>
+</p>
+
+<p>
+  <strong>Lane:</strong>
+  <%= @archived_status.lane %>
+</p>
+
+<%= link_to 'Edit', edit_archived_status_path(@archived_status) %> |
+<%= link_to 'Back', archived_statuses_path %>

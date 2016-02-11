@@ -1,0 +1,73 @@
+<%= form_for(@status) do |f| %>
+  <% if @status.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@status.errors.count, "error") %> prohibited this status from being saved:</h2>
+
+      <ul>
+      <% @status.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :druid %><br>
+    <%= f.text_field :druid %>
+  </div>
+  <div class="field">
+    <%= f.label :datastream %><br>
+    <%= f.text_field :datastream %>
+  </div>
+  <div class="field">
+    <%= f.label :process %><br>
+    <%= f.text_field :process %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :error_msg %><br>
+    <%= f.text_field :error_msg %>
+  </div>
+  <div class="field">
+    <%= f.label :error_txt %><br>
+    <%= f.text_area :error_txt %>
+  </div>
+  <div class="field">
+    <%= f.label :datetime %><br>
+    <%= f.datetime_select :datetime %>
+  </div>
+  <div class="field">
+    <%= f.label :attempts %><br>
+    <%= f.number_field :attempts %>
+  </div>
+  <div class="field">
+    <%= f.label :elapsed %><br>
+    <%= f.text_field :elapsed %>
+  </div>
+  <div class="field">
+    <%= f.label :lifecycle %><br>
+    <%= f.text_field :lifecycle %>
+  </div>
+  <div class="field">
+    <%= f.label :repository %><br>
+    <%= f.text_field :repository %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br>
+    <%= f.text_field :note %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br>
+    <%= f.number_field :priority %>
+  </div>
+  <div class="field">
+    <%= f.label :lane_id %><br>
+    <%= f.text_field :lane_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

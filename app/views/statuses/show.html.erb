@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Druid:</strong>
+  <%= @status.druid %>
+</p>
+
+<p>
+  <strong>Datastream:</strong>
+  <%= @status.datastream %>
+</p>
+
+<p>
+  <strong>Process:</strong>
+  <%= @status.process %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @status.status %>
+</p>
+
+<p>
+  <strong>Error msg:</strong>
+  <%= @status.error_msg %>
+</p>
+
+<p>
+  <strong>Error txt:</strong>
+  <%= @status.error_txt %>
+</p>
+
+<p>
+  <strong>Datetime:</strong>
+  <%= @status.datetime %>
+</p>
+
+<p>
+  <strong>Attempts:</strong>
+  <%= @status.attempts %>
+</p>
+
+<p>
+  <strong>Elapsed:</strong>
+  <%= @status.elapsed %>
+</p>
+
+<p>
+  <strong>Lifecycle:</strong>
+  <%= @status.lifecycle %>
+</p>
+
+<p>
+  <strong>Repository:</strong>
+  <%= @status.repository %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @status.note %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @status.priority %>
+</p>
+
+<p>
+  <strong>Lane:</strong>
+  <%= @status.lane %>
+</p>
+
+<%= link_to 'Edit', edit_status_path(@status) %> |
+<%= link_to 'Back', statuses_path %>
