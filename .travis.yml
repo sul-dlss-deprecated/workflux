@@ -1,0 +1,12 @@
+language: ruby
+rvm:
+  - 2.4.1
+
+email: false
+
+install:
+  - bundle install --without production
+script: bundle exec rake
+
+sudo: false
+cache: bundler
