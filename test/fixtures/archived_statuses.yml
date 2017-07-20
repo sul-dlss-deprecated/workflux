@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  druid: MyString
+  druid: MyString1
   datastream: MyString
   process: MyString
   status: MyString
@@ -16,10 +16,10 @@ one:
   version: 1
   note: MyString
   priority: 1
-  lane_id: 
+  lane_id: a
 
 two:
-  druid: MyString
+  druid: MyString2
   datastream: MyString
   process: MyString
   status: MyString
@@ -34,4 +34,4 @@ two:
   version: 1
   note: MyString
   priority: 1
-  lane_id: 
+  lane_id: a
