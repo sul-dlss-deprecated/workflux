@@ -18,30 +18,30 @@ class StatusesControllerTest < ActionController::TestCase
 
   test "should create status" do
     assert_difference('Status.count') do
-      post :create, status: { attempts: @status.attempts, datastream: @status.datastream, datetime: @status.datetime, druid: @status.druid + "2", elapsed: @status.elapsed, error_msg: @status.error_msg, error_txt: @status.error_txt, lane_id: @status.lane_id, lifecycle: @status.lifecycle, note: @status.note, priority: @status.priority, process: @status.process, repository: @status.repository, status: @status.status }
+      post :create, params: { status: { attempts: @status.attempts, datastream: @status.datastream, datetime: @status.datetime, druid: @status.druid + "2", elapsed: @status.elapsed, error_msg: @status.error_msg, error_txt: @status.error_txt, lane_id: @status.lane_id, lifecycle: @status.lifecycle, note: @status.note, priority: @status.priority, process: @status.process, repository: @status.repository, status: @status.status } }
     end
 
     assert_redirected_to status_path(assigns(:status))
   end
 
   test "should show status" do
-    get :show, id: @status
+    get :show, params: { id: @status }
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @status
+    get :edit, params: { id: @status }
     assert_response :success
   end
 
   test "should update status" do
-    patch :update, id: @status, status: { attempts: @status.attempts, datastream: @status.datastream, datetime: @status.datetime, druid: @status.druid, elapsed: @status.elapsed, error_msg: @status.error_msg, error_txt: @status.error_txt, lane_id: @status.lane_id, lifecycle: @status.lifecycle, note: @status.note, priority: @status.priority, process: @status.process, repository: @status.repository, status: @status.status }
+    patch :update, params: { id: @status, status: { attempts: @status.attempts, datastream: @status.datastream, datetime: @status.datetime, druid: @status.druid, elapsed: @status.elapsed, error_msg: @status.error_msg, error_txt: @status.error_txt, lane_id: @status.lane_id, lifecycle: @status.lifecycle, note: @status.note, priority: @status.priority, process: @status.process, repository: @status.repository, status: @status.status } }
     assert_redirected_to status_path(assigns(:status))
   end
 
   test "should destroy status" do
     assert_difference('Status.count', -1) do
-      delete :destroy, id: @status
+      delete :destroy, params: { id: @status }
     end
 
     assert_redirected_to statuses_path

@@ -1,4 +1,4 @@
-class CreateDatabase < ActiveRecord::Migration
+class CreateDatabase < ActiveRecord::Migration[5.1]
   def self.up
     ActiveRecord::Schema.define(version: 0) do
 
