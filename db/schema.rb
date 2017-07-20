@@ -20,12 +20,12 @@ ActiveRecord::Schema.define(version: 1) do
     t.string   "status",     limit: 256
     t.string   "error_msg",  limit: 4000
     t.text     "error_txt"
-    t.datetime "datetime"
+    t.datetime "datetime",   limit: 6
     t.integer  "attempts",                                        default: 0
     t.string   "lifecycle",  limit: 256
     t.decimal  "elapsed",                 precision: 9, scale: 3
     t.string   "repository", limit: 256
-    t.datetime "archive_dt",                                                          null: false
+    t.datetime "archive_dt", limit: 6,                                                null: false
     t.integer  "version",                                         default: 1
     t.string   "note",       limit: 4000
     t.integer  "priority",                                        default: 0
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 1) do
     t.string   "status",     limit: 256
     t.string   "error_msg",  limit: 4000
     t.text     "error_txt"
-    t.datetime "datetime"
+    t.datetime "datetime",   limit: 6
     t.integer  "attempts",                                        default: 0
     t.decimal  "elapsed",                 precision: 9, scale: 3
     t.string   "lifecycle",  limit: 256
